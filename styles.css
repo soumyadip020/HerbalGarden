@@ -1,0 +1,806 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/wallpaperflare.com_wallpaper.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero a {
+    color: #fff;
+    background: #5cb85c;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero a:hover {
+    background: #4cae4c;
+}
+
+
+
+/* Image Slider */
+.image-slider {
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(240, 255, 240, 0.9), rgba(255, 255, 255, 0.9)); /* Herbal-like background with a gradient */
+    position: relative; /* For arrow controls */
+    overflow: hidden; 
+    border-radius: 12px; /* Rounded edges for a modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    gap: 1.5rem;
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth; /* Smooth scrolling between slides */
+    padding-bottom: 1rem;
+}
+
+/* Custom scrollbar for a professional touch */
+.slides::-webkit-scrollbar {
+    height: 8px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background-color: rgba(90, 138, 64, 0.8); /* Herbal-like green */
+    border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Each slide */
+.slide {
+    flex: none;
+    width: 320px; /* Wider slide */
+    background: #fff; /* Cleaner white background */
+    border: none;
+    border-radius: 12px; /* Softer, rounded corners */
+    text-align: center;
+    padding: 1.5rem; /* More padding for better spacing */
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* On hover: slide expands and shadow deepens */
+.slide:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: rgba(90, 138, 64, 0.05); /* Light herbal green tint on hover */
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem; /* Space between image and text */
+    transition: transform 0.3s ease;
+}
+
+/* Slight zoom effect on the image when hovering over the slide */
+.slide:hover img {
+    transform: scale(1.05);
+}
+
+.slide p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #333; /* Darker, more professional text color */
+    font-size: 1.1rem; /* Slightly larger text for emphasis */
+}
+
+/* ... (rest of your CSS) */
+
+.redirect-button {
+    background-color: rgba(90, 138, 64, 0.8);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.redirect-button:hover {
+    background-color: rgba(90, 138, 64, 0.9);
+}
+
+/* Optional: Add arrow controls */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensures arrows don't interfere with scroll */
+}
+
+.slider-controls button {
+    background-color: rgba(90, 138, 64, 0.7); /* Herbal green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    pointer-events: all; /* Ensure buttons can be clicked */
+}
+
+.slider-controls button:hover {
+    background-color: rgba(90, 138, 64, 0.9); /* Darker green on hover */
+}
+
+/* Optional: Add arrow icons (using font-awesome or similar) */
+.slider-controls button i {
+    font-size: 1.5rem;
+}
+
+
+
+/* Optional: Add arrow controls */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.control-button {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border:none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.control-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* Content Sections */
+section {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem 0;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+section:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-5px);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* About Section */
+#about {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, rgba(225, 245, 220, 0.8), rgba(255, 255, 255, 0.8)), url('path/to/herbal-background.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #cce5cc;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adding smooth transition for hover */
+}
+
+/* Add scaling and shadow on hover for a more interactive feel */
+.about-container:hover {
+    transform: translateY(-10px); /* Slight upward movement */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.about-container img {
+    max-width: 50%;
+    height: auto;
+    max-height: 400px; 
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+/* Zoom in on the image when hovered */
+.about-container img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #5a8a40;
+    position: relative; /* Positioning for the background highlight effect */
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Add a background highlight and shadow on hover */
+.about-text p:hover {
+    color: #000; /* Change text color to black */
+    background-color: rgba(90, 138, 64, 0.1); /* Subtle background highlight */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow for emphasis */
+    border-radius: 8px; /* Rounded corners for a more polished look */
+}
+
+/* Optional additional effect: underline the text with animation */
+.about-text p::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #5a8a40;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.about-text p:hover::before {
+    visibility: visible;
+    width: 100%; /* Underline expands across the text */
+}
+
+
+
+
+/* Grid Layout */
+/* Plant Grid, Benefits Content, Testimonials Grid */
+.plant-grid, .benefits-content, .testimonials-grid {
+    display: flex;
+    gap: 2rem; /* Increased gap for better spacing */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 2rem; /* Balanced spacing for a clean layout */
+    background: #ffffff; /* Clean white background */
+    border-radius: 12px; /* Slightly rounded corners */
+    border: 1px solid #dce7d8; /* Light green border for a subtle herbal touch */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a professional depth */
+}
+
+/* Plant Items, Benefit Items, Testimonial Items */
+.plant-item, .benefit-item, .testimonial-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background: #ffffff; /* White background for consistency */
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px solid #d4e6d2; /* Light green border to hint at herbal theme */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow for depth */
+}
+
+/* Hover Effects for Interactivity */
+.plant-item:hover, .benefit-item:hover, .testimonial-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f3f8f3; /* Subtle light greenish-white background on hover */
+}
+
+/* Images for Plant and Testimonial Items */
+.plant-item img, .testimonial-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Slightly less rounded for a sharper look */
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.plant-item img:hover, .testimonial-item img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect for images on hover */
+}
+
+/* Benefits Content Styling */
+.benefit-item {
+    flex: 1;
+    max-width: 30%;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e0f4e0; /* Light green border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.benefit-item:hover {
+    background-color: #f0f8f0; /* Subtle light green background on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings and Text within Items */
+.plant-item h3, .benefit-item h3, .testimonial-item h3 {
+    font-size: 1.8rem;
+    color: #2e7d32; /* Dark green for headings */
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+.plant-item p, .benefit-item p, .testimonial-item p {
+    font-size: 1.2rem;
+    color: #666666; /* Medium gray for text to ensure readability */
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.plant-item p:hover, .benefit-item p:hover, .testimonial-item p:hover {
+    color: #004d00; /* Darker green on hover for emphasis */
+}
+
+/* Testimonials Special Style */
+.testimonial-item {
+    background: #ffffff;
+    padding: 2rem;
+    position: relative;
+    border: 1px solid #dce7d8; /* Light green border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    overflow: hidden; /* Ensure content stays within the container */
+}
+
+.testimonial-item::before {
+    content: '“';
+    font-size: 4rem;
+    color: #a8d5a2; /* Soft green for quote marks */
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+.testimonial-item::after {
+    content: '”';
+    font-size: 4rem;
+    color: #a8d5a2; /* Soft green for quote marks */
+    position: absolute;
+    bottom: -1rem;
+    right: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .plant-item, .benefit-item, .testimonial-item {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .benefit-item {
+        text-align: center;
+    }
+}
+
+
+
+/* Garden Preview Section */
+
+#garden-preview {
+    background: linear-gradient(135deg, rgba(224, 242, 233, 0.8), rgba(245, 249, 245, 0.9)), url('path/to/herbal-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    border: 2px solid rgba(204, 229, 204, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    color: #487f35; /* Herbal green initial text color */
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Heading and Paragraph Hover Effects */
+#garden-preview h2, #garden-preview p {
+    transition: color 0.4s ease; /* Smooth color transition */
+}
+
+#garden-preview h2:hover, #garden-preview p:hover {
+    color: #000; /* Text turns black on hover */
+}
+
+/* Decorative Herbal Elements */
+#garden-preview::before, #garden-preview::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(94, 153, 84, 0.15);
+    filter: blur(30px);
+    z-index: -1;
+}
+
+#garden-preview::before {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+    left: -40px;
+}
+
+#garden-preview::after {
+    width: 180px;
+    height: 180px;
+    bottom: -60px;
+    right: -60px;
+}
+
+/* Heading Styles */
+#garden-preview h2 {
+    font-size: 2.7rem;
+    color: #3e6b2f;
+    margin-bottom: 1.8rem;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Video Container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.video-container video {
+    width: 46%;
+    max-width: 850px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraph Text */
+#garden-preview p {
+    font-size: 1.3rem;
+    color: #487f35;
+    margin-top: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.7;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: color 0.4s ease;
+}
+
+/* Hover effect for the entire section */
+#garden-preview:hover {
+    background: linear-gradient(135deg, rgba(220, 235, 220, 0.9), rgba(240, 250, 240, 0.9)), url('path/to/herbal-background.jpg'); 
+    border-color: rgba(180, 210, 180, 0.9); /* Slight color change on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #garden-preview h2 {
+        font-size: 2.2rem;
+    }
+
+    .video-container video {
+        width: 90%;
+    }
+
+    #garden-preview p {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
+/* Interactive Experience Section */
+#contact {
+    padding: 5rem 0;
+    background: rgb(226, 226, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-container {
+    display: flex;
+    background: #fff;
+    width: 75%;
+    
+}
+
+.contact-img {
+    width: 60%;
+}
+
+.contact-img img {
+    display: block;
+    height: 400px;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    
+}
+
+.form-container {
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+}
+
+.form-container input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.form-container textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    color: #444;
+    outline: none;
+    padding: 1rem 0;
+    resize: none;
+}
+
+.form-container h2 {
+    font-size: 2.7rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 1rem;
+    margin-top: -1.2rem;
+}
+
+.form-container a {
+    font-size: 1.3rem;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: small;
+}
+
+.btn-primary {
+    color: #fff;
+    background: #5cb85c;
+}
+
+.btn-primary:hover {
+    background: #2e4631;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Call-to-Action Section */
+.harmony-section {
+    background: #2e4631; 
+    color: #f5f5f5; 
+    text-align: center;
+    padding: 60px 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.harmony-section:hover {
+    background-color: #3b5e43;
+    transform: scale(1.02);
+}
+
+.harmony-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #a9c5a2; 
+}
+
+.harmony-section .section-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #c2d6c0; 
+}
+
+.harmony-section .harmony-description {
+    font-size: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f5f5f5; 
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 2rem;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+/* Model Pages Slider (Reuse the Image Slider Styles) */
+/* Scrollable Image Section */
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+
+/* Custom scrollbar styling */
+.horizontal-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(90, 138, 64, 0.8); /* Herbal green */
+    border-radius: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Each Thumbnail Item */
+.model-page-thumbnail {
+    flex: none;
+    scroll-snap-align: start;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.model-page-thumbnail img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on the thumbnails */
+.model-page-thumbnail:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.model-page-thumbnail:hover img {
+    transform: scale(1.05);
+}

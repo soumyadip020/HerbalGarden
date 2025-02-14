@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Herbal Garden</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section with Navigation Bar -->
+    <header>
+        <div class="logo">Herbal Garden</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#plants">Plants</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#garden-preview">Tour</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Good Pictures -->
+    <section class="hero">
+        <h1>Explore the Healing Power of Nature</h1>
+        <p>Step into our Virtual Herbal Garden to discover the diverse range of medicinal plants used in AYUSH. <a href="#plants">Begin your exploration</a> and uncover the secrets of natural healing.</p>
+    </section>
+
+
+<!-- Image Slider Section -->
+<section class="image-slider">
+    <div class="slides">
+    <div class="slide">
+        <img src="./images/Tulsi-Queen of herbs.jpeg" alt="Herb Image 1">
+        <p>Tulsi - The Queen of Herbs</p>
+        <a href="public\plants\Ocimum-tenuiflorum.html">
+            <button class="redirect-button">Learn More</button>
+        </a>
+        
+
+    </div>
+    <div class="slide">
+        <img src="./images/aswagandha.jpeg" alt="Herb Image 2">
+        <p>Ashwagandha - The Strength of a Stallion</p>
+        <a href="public\plants\Withania-somnifera.html">
+            <button class="redirect-button">Learn More</button>
+        </a>
+    </div>
+    <div class="slide">
+        <img src="./images/Neem 2.0.jpeg" alt="Herb Image 3">
+        <p>Neem - Nature's Pharmacy</p>
+        <a href="public\plants\Azadirachta-indica.html">
+            <button class="redirect-button">Learn More</button>
+        </a>
+    </div>
+    <div class="slide">
+        <img src="images\aloevera.jpg "alt="Ginger">
+        <p>Aloevera - The Skin Aid</p>
+        <a href="public\plants\Aloe-barbadensis-miller.html">
+            <button class="redirect-button">Learn More</button>
+        </a>
+   
+    </div>
+    <div class="slide">
+        <img src="images\sandalwood.jpg" alt="Turmeric">
+        <p>Sandal - The Natures Perfume</p>
+        <a href="public\plants\Santalum-album.html">
+            <button class="redirect-button">Learn More</button>
+        </a>
+      
+    </div>
+    </div>
+    <script>
+        const redirectButtons = document.querySelectorAll('.redirect-button');
+
+        redirectButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Replace 'target.html' with the actual target file path
+            window.location.href = 'target.html';
+        });
+        });</script>
+    
+
+</section>
+
+
+
+    
+    <!-- About Section -->
+<section id="about">
+    <div class="about-container">
+        <img src="./images/about section.jpeg" alt="Virtual Herbal Garden">
+        <div class="about-text">
+            <h2>About the Virtual Herbal Garden</h2>
+            <p>Our Virtual Herbal Garden offers an immersive experience where users can explore a diverse range of medicinal plants utilized in AYUSH (Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homeopathy). Designed with an interactive interface, the garden allows users to delve into the rich heritage of these traditional healing practices.</p>
+            <p>Each plant in our garden is carefully curated to provide detailed information on its medicinal properties, historical significance, and practical applications. Whether you are a student, researcher, or just curious about natural remedies, our garden aims to be a comprehensive resource for learning and exploration.</p>
+            <p>Through a combination of educational content, high-quality images, and interactive elements, we strive to create a meaningful and engaging experience that connects users with the timeless wisdom of herbal medicine. Join us in this journey to discover the healing power of nature and enhance your understanding of traditional health practices.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Featured Medicinal Plants Section -->
+    <section id="plants">
+        <h2>Featured Medicinal Plants</h2>
+        <div class="plant-grid">
+            <div class="plant-item">
+                <img src="./images/AdobeStock_492817923_Preview.jpeg" alt="Tulsi">
+                <h3>Tulsi</h3>
+                <p>Known for its medicinal properties in Ayurveda.</p>
+            </div>
+            <div class="plant-item">
+                <img src="./images/AdobeStock_812621944_Preview.jpeg" alt="Ashwagandha">
+                <h3>Ashwagandha</h3>
+                <p>Used in Ayurveda to relieve stress and boost immunity.</p>
+            </div>
+            <div class="plant-item">
+                <img src="./images/Neem.jpeg" alt="Neem">
+                <h3>Neem</h3>
+                <p>A powerful herb with antifungal and antibacterial properties.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits of AYUSH Section -->
+    <section id="benefits">
+        <h2>Benefits of AYUSH</h2>
+        <div class="benefits-content">
+            <div class="benefit-item">
+                <h3>Holistic Health</h3>
+                <p>AYUSH practices promote overall well-being by addressing the mind, body, and spirit.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Natural Remedies</h3>
+                <p>Utilizes herbs and natural methods for healing and prevention.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Preventive Care</h3>
+                <p>Focuses on maintaining health and preventing diseases.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Garden Preview Section -->
+<section id="garden-preview">
+    <h2>Virtual Herbarium Tour</h2>
+    <div class="video-container">
+        <!-- Placeholder for video from PC -->
+        <video width="560" height="315" controls>
+            <source src="./video/Sih_final_vid_HD 720p_LOW_FR30.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <p>Watch this video to get a preview of what the Virtual Herbal Garden will look like. Experience the features and immersive elements we are bringing to life.</p>
+</section>
+
+
+    <!-- Interactive Experience Section -->
+    <section id="contact">
+
+        <div class="contact-container container">
+            <div class="contact-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQve3vpfXgDuKBRjPuKFnuaBzapmarvxxTd9A&s" alt="" />
+            </div>
+
+            <div class="form-container">
+                <h2>Share Your Valuable Experience</h2>
+                <input type="text" placeholder="Your Name" />
+                <textarea cols="30" rows="6" placeholder="Type Your Message"></textarea>
+                <a href="#" class="btn btn-primary">Submit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="harmony" class="harmony-section">
+        <div class="container">
+            <h2 class="section-title">Harmony of Mind, Body, and Nature</h2>
+            <p class="section-subtitle">In our fast-paced world, the ancient wisdom of herbal medicine offers a path to reconnect with nature. Discover how the power of plants can bring balance and tranquility to your life, fostering a deeper connection with the earth's natural rhythms.</p>
+            <p class="harmony-description">Our Virtual Herbal Garden is more than just a collection of plants; it's an immersive journey into the heart of nature's healing traditions. Experience the synergy of mind, body, and nature as you explore the diverse range of medicinal herbs used in AYUSH.</p>
+        </div>
+    </section>
+    
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p>&copy; 2024 Virtual Herbal Garden. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
